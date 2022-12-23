@@ -1,0 +1,47 @@
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+}
+
+.content {
+    background-color: burlywood;
+    height: 800px;
+}
+
+.tabBar {
+    justify-content: center;
+}
+.tab {
+    font-size: 1.5em;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 2px;
+    background-color: aliceblue;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.tab:hover {
+    cursor: pointer;
+    background-color: rgba(240, 248, 255, 0.608);
+
+}
+
+.resource {
+    cursor: pointer;
+    background-color: aliceblue;
+    padding: 2px;
+    text-align: center;
+}
+
+.main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
+
+.menuTitle {
+    font-size: 1.2em;
+    font-weight: bold;
+}
