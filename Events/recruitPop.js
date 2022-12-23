@@ -1,4 +1,3 @@
-import { updateItems } from "../dynamicDOM/updateUI.js";
 import { activeBorder } from "../dynamicDOM/utilityUI.js";
 import { player } from "../player/playerObject.js";
 
@@ -6,21 +5,19 @@ let populationID = 0;
 
 
 function selectItem() {
-    document.querySelector('#forester').addEventListener('click', () => {
-        itemID = 0;
-        activeBorder(document.querySelector('#forester'));
+    document.querySelector('.foresterBtn').addEventListener('click', () => {
+        populationID = 0;
+        recruitPop();
     });
 
-    document.querySelector('#miner').addEventListener('click', () => {
-        itemID = 1;
-        activeBorder(document.querySelector('#miner'));
+    document.querySelector('.minerBtn').addEventListener('click', () => {
+        populationID = 1;
+        recruitPop();
     });
 }
 
 function recruitPop() {
-    document.querySelector('.recruitBtn').addEventListener('click', () => {
-
-        if (itemID === 0) {
+        if (populationID === 0) {
             if(player.resource.currency.getGold < 1) {
                 console.log('Not enough resources');
                 return;
@@ -29,7 +26,7 @@ function recruitPop() {
             player.population.worker.setForester = 1;
         }
 
-        if (itemID === 1) {
+        if (populationID === 1) {
             if(player.resource.currency.getGold < 1) {
                 console.log('Not enough resources');
                 return;
@@ -37,12 +34,9 @@ function recruitPop() {
             player.resource.currency.setGold= -1;
             player.population.worker.setMiner = 1;
         }
-        updatePop();
-    });
 }
 
 function recruitEvent() {
-    recruitPop();
     selectItem();
 }
 

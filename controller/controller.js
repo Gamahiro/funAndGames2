@@ -10,6 +10,8 @@ import { buildHouse } from "../Events/buildStructure.js";
 import { createCraftUI } from "../dynamicDOM/createCraftUI.js";
 import { craftEvent } from "../Events/craft.js";
 
+import { createPopUI } from "../dynamicDOM/recruitPopUI.js";
+import { recruitEvent } from "../Events/recruitPop.js";
 
 function initResourceTab() {
     createResourceCollectUI();
@@ -31,4 +33,8 @@ function initTradeTab() {
     tradeEvent();
 }
 
-export {initResourceTab, initStructuresTab, initCraftTab, initTradeTab}
+function recruitEventTab() {
+    recruitEvent();
+}
+
+export {initResourceTab, initStructuresTab, initCraftTab, initTradeTab, recruitEventTab}

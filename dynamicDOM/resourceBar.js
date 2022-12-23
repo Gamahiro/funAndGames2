@@ -2,8 +2,6 @@
 function createResourceBar() {
     const resourceStatusBar = document.createElement('div');
     resourceStatusBar.className = 'resourceStatusBar';
-    resourceStatusBar.style.display = 'flex';
-    resourceStatusBar.style.justifyContent = 'space-around';
     
     const goldStatus = document.createElement('span');
     goldStatus.textContent = 'Gold: ';

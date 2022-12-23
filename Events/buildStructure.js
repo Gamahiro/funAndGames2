@@ -1,5 +1,7 @@
 import { player } from "../player/playerObject.js";
 import {updateStructures} from "../dynamicDOM/updateUI.js";
+import {updateStatusBar} from "../dynamicDOM/updateUI.js";
+
 
 function buildHouse() {
     document.querySelector('.buildBtn').addEventListener('click', () => {
@@ -11,6 +13,7 @@ function buildHouse() {
         player.resource.refinedResource.setPlank = -10;
         player.structures.setHouse = 1;
         updateStructures();
+        updateStatusBar();
     });
 }
 

@@ -1,4 +1,4 @@
-import { updateItems } from "../dynamicDOM/updateUI.js";
+import { updateItems, updateStatusBar } from "../dynamicDOM/updateUI.js";
 import { activeBorder } from "../dynamicDOM/utilityUI.js";
 import { player } from "../player/playerObject.js";
 
@@ -38,6 +38,8 @@ function sellItem() {
             player.resource.currency.setGold = 2;
         }
         updateItems();
+    updateStatusBar();
+
     });
 }
 

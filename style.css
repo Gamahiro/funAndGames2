@@ -21,9 +21,12 @@ body {
 }
 
 .resourceStatusBar {
+    margin-top: 5px;
     background-color: aliceblue;
     border: 2px solid black;
     margin-bottom: 5px;
+    display: flex;
+    justify-content: space-around;
     
 }
 .resourceStatusBar div {
@@ -31,6 +34,8 @@ body {
     text-align: center;
     display: flex;
     align-items: center;
+    padding: 2px 5px 2px 5px;
+    width: 115px;
 
 }
 .resourceStatusBar :first-child {
@@ -69,7 +74,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 200px;
-    
 }
 
 .menuTitle {
@@ -78,10 +82,16 @@ body {
 }
 
 .populationContainer {
+    margin-top: auto;
+    margin-bottom: 50px;
     display: flex;
     flex-direction : column;
     justify-content: end;
     align-items: center;
-    height: 450px;
     width: 500px;
+}
+
+.populationContainer > div {
+    border: 2px solid black;
+    margin-bottom: 2px;
 }

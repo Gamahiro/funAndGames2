@@ -82,10 +82,10 @@ const player = {
             },
             miner: 0,
             get getMiner() {
-                return this.Miner;
+                return this.miner;
             },
             set setMiner(amount) {
-                this.Miner += amount;
+                this.miner += amount;
             }
         }
     }

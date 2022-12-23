@@ -1,4 +1,4 @@
-import { updateResources } from "../dynamicDOM/updateUI.js";
+import { updateResources, updateStatusBar } from "../dynamicDOM/updateUI.js";
 import { activeBorder } from "../dynamicDOM/utilityUI.js";
 import { player } from "../player/playerObject.js";
 
@@ -52,6 +52,7 @@ function collectResource() {
             player.resource.rawResource.setMetal = -1;
         }
         updateResources();
+        updateStatusBar();
     });
 }
 
