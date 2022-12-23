@@ -58,6 +58,10 @@ body {
     text-align: center;
 }
 
+.resource:hover {
+    background-color: rgba(240, 248, 255, 0.608);
+}
+
 .main {
     margin-left: auto;
     margin-right: auto;

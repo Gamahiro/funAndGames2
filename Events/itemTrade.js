@@ -1,4 +1,5 @@
-import { activeBorder, updateItems } from "../dynamicDOM/updateUI.js";
+import { updateItems } from "../dynamicDOM/updateUI.js";
+import { activeBorder } from "../dynamicDOM/utilityUI.js";
 import { player } from "../player/playerObject.js";
 
 let itemID = 0;

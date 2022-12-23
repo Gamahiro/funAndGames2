@@ -1,4 +1,5 @@
-import { updateResources, activeBorder } from "../dynamicDOM/updateUI.js";
+import { updateResources } from "../dynamicDOM/updateUI.js";
+import { activeBorder } from "../dynamicDOM/utilityUI.js";
 import { player } from "../player/playerObject.js";
 
 let resourceID = 0;
@@ -54,9 +55,9 @@ function collectResource() {
     });
 }
 
-function collectEvent() {
+function resourceEvent() {
     selectResource();
     collectResource();
 }
 
-export {collectEvent}
+export {resourceEvent}

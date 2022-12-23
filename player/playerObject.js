@@ -80,7 +80,7 @@ const player = {
             set setForester(amount) {
                 this.forester += amount;
             },
-            Miner: 0,
+            miner: 0,
             get getMiner() {
                 return this.Miner;
             },

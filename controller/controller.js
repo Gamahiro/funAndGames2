@@ -1,12 +1,19 @@
-import { createResourceCollectUI, createStructuresBuildUI, createCraftUI, createTradeUI } from "../dynamicDOM/updateUI.js";
-import { collectEvent } from "../Events/collectEvent.js";
-import { buildHouse } from "../Events/buildStructure.js";
-import { craftEvent } from "../Events/craft.js";
+import { createTradeUI } from "../dynamicDOM/createTradeUI.js";
 import { tradeEvent } from "../Events/itemTrade.js";
+
+import { createResourceCollectUI } from "../dynamicDOM/createResourceUI.js";
+import { resourceEvent } from "../Events/createResource.js";
+
+import { createStructuresBuildUI } from "../dynamicDOM/buildStructureUI.js";
+import { buildHouse } from "../Events/buildStructure.js";
+
+import { createCraftUI } from "../dynamicDOM/createCraftUI.js";
+import { craftEvent } from "../Events/craft.js";
+
 
 function initResourceTab() {
     createResourceCollectUI();
-    collectEvent();
+    resourceEvent();
 }
 
 function initStructuresTab() {
