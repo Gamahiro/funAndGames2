@@ -70,6 +70,24 @@ const player = {
                 this.chair += amount;
             }
         }
+    },
+    population: {
+        worker: {
+            forester: 0,
+            get getForester() {
+                return this.forester;
+            },
+            set setForester(amount) {
+                this.forester += amount;
+            },
+            Miner: 0,
+            get getMiner() {
+                return this.Miner;
+            },
+            set setMiner(amount) {
+                this.Miner += amount;
+            }
+        }
     }
 }
 

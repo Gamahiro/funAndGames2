@@ -32,23 +32,23 @@ function collectResource() {
             player.resource.rawResource.setWood = 1;
         }
         else if (resourceID === 1) {
-            if (player.resource.rawResource.getWood < 10) {
+            if (player.resource.rawResource.getWood < 1) {
                 console.log(`You need 10 of a resource to refine. You have ${player.resource.rawResource.getWood} wood`);
                 return
             }
-            player.resource.rawResource.setWood = -10;
+            player.resource.rawResource.setWood = -1;
             player.resource.refinedResource.setPlank = 1;
         }
         else if (resourceID === 2) {
             player.resource.rawResource.setMetal = 1;
         }
         else if (resourceID === 3) {
-            if (player.resource.rawResource.getMetal < 10) {
+            if (player.resource.rawResource.getMetal < 1) {
                 console.log(`You need 10 of a resource to refine. You have ${player.resource.rawResource.getMetal} metal`);
                 return;
             }
             player.resource.refinedResource.setNails = 1;
-            player.resource.rawResource.setMetal = -10;
+            player.resource.rawResource.setMetal = -1;
         }
         updateResources();
     });

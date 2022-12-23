@@ -23,6 +23,16 @@ function activeBorder(DOMElem) {
     DOMElem.style.border = '2px solid green';
 }
 
+function updateStatusBar() {
+    document.querySelector('#gold').textContent = `Gold: ${player.resource.currency.getGold}`;
+    document.querySelector('#houses').textContent = `Houses: ${player.structures.getHouse}`;
+    document.querySelector('#woodStatus').textContent = `Wood: ${player.resource.rawResource.getWood}`;
+    document.querySelector('#plankStatus').textContent = `Planks: ${player.resource.refinedResource.getPlank}`;
+    document.querySelector('#metalStatus').textContent = `Metal: ${player.resource.rawResource.getMetal}`;
+    document.querySelector('#nailStatus').textContent = `Nails: ${player.resource.refinedResource.getNails}`;
+
+}
+
 function createResourceCollectUI() {
     const main = document.querySelector('.main');
     while(main.firstElementChild) {
@@ -164,4 +174,4 @@ function createTradeUI() {
 
 }
 
-export{updateResources, activeBorder, createResourceCollectUI, createStructuresBuildUI, createCraftUI, updateStructures, updateItems, createTradeUI}
+export{updateStatusBar, updateResources, activeBorder, createResourceCollectUI, createStructuresBuildUI, createCraftUI, updateStructures, updateItems, createTradeUI}

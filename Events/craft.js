@@ -20,22 +20,22 @@ function craftItem() {
     document.querySelector('.craftBtn').addEventListener('click', () => {
 
         if (itemID === 0) {
-            if(player.resource.refinedResource.getPlank < 10 || player.resource.refinedResource.getNails < 10) {
+            if(player.resource.refinedResource.getPlank < 1 || player.resource.refinedResource.getNails < 1) {
                 console.log('Not enough resources');
                 return;
             }
-            player.resource.refinedResource.setPlank = -10;
-            player.resource.refinedResource.setNails = -10;
+            player.resource.refinedResource.setPlank = -1;
+            player.resource.refinedResource.setNails = -1;
             player.items.tradeitems.setArrow = 1;
         }
 
         if (itemID === 1) {
-            if(player.resource.refinedResource.getPlank < 10 || player.resource.refinedResource.getPlank < 10) {
+            if(player.resource.refinedResource.getPlank < 1 || player.resource.refinedResource.getPlank < 1) {
                 console.log('Not enough resources');
                 return;
             }
-            player.resource.refinedResource.setPlank = -10;
-            player.resource.refinedResource.setNails = -10;
+            player.resource.refinedResource.setPlank = -1;
+            player.resource.refinedResource.setNails = -1;
             player.items.tradeitems.setChair = 1;
         }
         updateItems();
