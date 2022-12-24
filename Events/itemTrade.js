@@ -1,6 +1,7 @@
 import { updateItems, updateStatusBar } from "../dynamicDOM/updateUI.js";
 import { activeBorder } from "../dynamicDOM/utilityUI.js";
 import { player } from "../player/playerObject.js";
+import {playerError} from "../Events/errorEvent.js";
 
 let itemID = 0;
 
@@ -22,7 +23,7 @@ function sellItem() {
 
         if (itemID === 0) {
             if(player.items.tradeitems.getArrow < 1) {
-                console.log('Not enough resources');
+                playerError(document.querySelector('.main'), 'Not enough resources');
                 return;
             }
             player.items.tradeitems.setArrow = -1;
@@ -31,7 +32,7 @@ function sellItem() {
 
         if (itemID === 1) {
             if(player.items.tradeitems.getChair < 1) {
-                console.log('Not enough resources');
+                playerError(document.querySelector('.main'), 'Not enough resources');
                 return;
             }
             player.items.tradeitems.setChair = -1;

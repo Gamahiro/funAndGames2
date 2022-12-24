@@ -95,3 +95,22 @@ body {
     border: 2px solid black;
     margin-bottom: 2px;
 }
+
+.errorContainer {
+    position: absolute;
+    background-color: red;
+    color: white;
+    text-align: center;
+    border: 2px solid black;
+    animation: 3s forwards fadeOut;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+

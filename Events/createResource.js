@@ -1,6 +1,7 @@
 import { updateResources, updateStatusBar } from "../dynamicDOM/updateUI.js";
 import { activeBorder } from "../dynamicDOM/utilityUI.js";
 import { player } from "../player/playerObject.js";
+import { playerError } from "../Events/errorEvent.js";
 
 let resourceID = 0;
 
@@ -34,7 +35,7 @@ function collectResource() {
         }
         else if (resourceID === 1) {
             if (player.resource.rawResource.getWood < 1) {
-                console.log(`You need 10 of a resource to refine. You have ${player.resource.rawResource.getWood} wood`);
+                playerError(document.querySelector('.main'),`You need 1 of a resource to refine. You have ${player.resource.rawResource.getWood} wood`);
                 return
             }
             player.resource.rawResource.setWood = -1;
@@ -45,7 +46,7 @@ function collectResource() {
         }
         else if (resourceID === 3) {
             if (player.resource.rawResource.getMetal < 1) {
-                console.log(`You need 10 of a resource to refine. You have ${player.resource.rawResource.getMetal} metal`);
+                playerError(document.querySelector('.main'),`You need 1 of a resource to refine. You have ${player.resource.rawResource.getMetal} metal`);
                 return;
             }
             player.resource.refinedResource.setNails = 1;

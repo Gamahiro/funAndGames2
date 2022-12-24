@@ -1,4 +1,4 @@
-import { activeBorder } from "../dynamicDOM/utilityUI.js";
+import { playerError } from "../Events/errorEvent.js";
 import { player } from "../player/playerObject.js";
 
 let populationID = 0;
@@ -19,7 +19,7 @@ function selectItem() {
 function recruitPop() {
         if (populationID === 0) {
             if(player.resource.currency.getGold < 1) {
-                console.log('Not enough resources');
+                playerError(document.querySelector('.populationContainer'), 'Not enough resources');
                 return;
             }
             player.resource.currency.setGold= -1;
@@ -28,7 +28,7 @@ function recruitPop() {
 
         if (populationID === 1) {
             if(player.resource.currency.getGold < 1) {
-                console.log('Not enough resources');
+                playerError(document.querySelector('.populationContainer'), 'Not enough resources');
                 return;
             }
             player.resource.currency.setGold= -1;
