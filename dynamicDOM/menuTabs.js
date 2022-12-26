@@ -24,11 +24,17 @@ function createMenuTabs() {
     recruitTab.id = 'recruitTab';
     recruitTab.textContent = 'Recruit'; */
 
+    const menuTab = document.createElement('div');
+    menuTab.className = 'tab';
+    menuTab.id = 'menuTab';
+    menuTab.textContent = 'Menu';
+
     const tabBar = document.createElement('div');
     tabBar.className = 'tabBar';
     tabBar.style.display = 'flex';
 
-    tabBar.append(resourceTab, structuresTab, craftTab, tradeTab);
+
+    tabBar.append(resourceTab, structuresTab, craftTab, tradeTab, menuTab);
 
     document.querySelector('.content').append(tabBar);
 

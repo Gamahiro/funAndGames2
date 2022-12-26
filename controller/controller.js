@@ -13,6 +13,9 @@ import { craftEvent } from "../Events/craft.js";
 import { createPopUI } from "../dynamicDOM/recruitPopUI.js";
 import { recruitEvent } from "../Events/recruitPop.js";
 
+import {createMenuOptions} from "../dynamicDOM/menuOptionsUI.js";
+import { saveLoadGame } from "../Events/saveLoadEvent.js";
+
 function initResourceTab() {
     createResourceCollectUI();
     resourceEvent();
@@ -37,4 +40,10 @@ function recruitEventTab() {
     recruitEvent();
 }
 
-export {initResourceTab, initStructuresTab, initCraftTab, initTradeTab, recruitEventTab}
+function initMenuTab() {
+    createMenuOptions();
+    saveLoadGame();
+}
+
+
+export {initResourceTab, initStructuresTab, initCraftTab, initTradeTab, recruitEventTab, initMenuTab}
