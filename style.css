@@ -23,6 +23,7 @@ body {
 #villageImage {
     margin-top: auto;
     width: 750px;
+    border: 10px ridge rgb(128, 125, 125);
 }
 
 .resourceStatusBar {
