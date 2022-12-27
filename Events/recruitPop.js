@@ -1,5 +1,6 @@
 import { playerError } from "../Events/errorEvent.js";
 import { player } from "../player/playerObject.js";
+import { countPops } from "../dynamicDOM/recruitPopUI.js";
 
 let populationID = 0;
 
@@ -24,6 +25,7 @@ function recruitPop() {
             }
             player.resource.currency.setGold= -1;
             player.population.worker.setForester = 1;
+            countPops(player.population.worker.getForester, document.querySelector('#foresterCounter'));
         }
 
         if (populationID === 1) {
@@ -33,6 +35,7 @@ function recruitPop() {
             }
             player.resource.currency.setGold= -1;
             player.population.worker.setMiner = 1;
+            countPops(player.population.worker.getMiner, document.querySelector('#minerCounter'));
         }
 }
 

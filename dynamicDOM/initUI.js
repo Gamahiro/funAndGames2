@@ -1,6 +1,7 @@
 import { createPopUI } from "./recruitPopUI.js";
 import {createResourceBar} from "./resourceBar.js";
 import { createMenuTabs } from "./menuTabs.js";
+import { createGFX } from "./createGFX.js";
 
 
 function initDom() {
@@ -27,6 +28,7 @@ function initDom() {
     createResourceBar();
     createMenuTabs();
     content.append(main);
+    createGFX();
     createPopUI();
 
     const footer = document.createElement('div');
