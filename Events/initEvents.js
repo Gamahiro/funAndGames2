@@ -2,6 +2,7 @@ import { initCraftTab, initResourceTab, initStructuresTab, initTradeTab, initMen
 import { updateStatusBar } from "../dynamicDOM/updateUI.js";
 import { recruitEvent } from "./recruitPop.js";
 import { workerIncome } from "../Events/passiveIncome.js";
+import { loadPlayer } from "../Events/localStorage.js";
 
 function tabSwitch() {
     document.querySelector('#resourcesTab').addEventListener('click', initResourceTab)
@@ -22,6 +23,7 @@ const incomeInterval = setInterval(function() {
 function initEvent() {
     recruitEvent();
     tabSwitch();
+    loadPlayer('defaultSave');
 }
 
 export { initEvent }
