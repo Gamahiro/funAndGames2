@@ -24,6 +24,7 @@ function initEvent() {
     recruitEvent();
     tabSwitch();
     loadPlayer('defaultSave');
+    console.log(localStorage);
 }
 
 export { initEvent }
