@@ -42,7 +42,7 @@ function createTradeUI() {
 
     const sellBtn = document.createElement('button');
     sellBtn.className = 'sellBtn';
-    sellBtn.textContent = 'Sell';
+    sellBtn.textContent = 'Sell All';
 
     main.append(tradeTitle, item1, item2, sellBtn);
 

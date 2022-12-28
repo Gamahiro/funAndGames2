@@ -5,6 +5,31 @@ import {playerError} from "../Events/errorEvent.js";
 
 let itemID = 0;
 
+function sellOneArrow() {
+    document.querySelector('#arrowSell').addEventListener('click', () => {
+        if(player.items.tradeitems.getArrow < 1) {
+            playerError(document.querySelector('.main'), 'Not enough resources');
+            return;
+        }
+        player.items.tradeitems.setArrow = -1;
+        player.resource.currency.setGold = 2;
+        updateItems();
+    updateStatusBar();
+    })
+}
+
+function sellOneChair() {
+    document.querySelector('#chairSell').addEventListener('click', () => {
+        if(player.items.tradeitems.getChair < 1) {
+            playerError(document.querySelector('.main'), 'Not enough resources');
+            return;
+        }
+        player.items.tradeitems.setChair = -1;
+        player.resource.currency.setGold = 2;
+        updateItems();
+    updateStatusBar();
+    })
+}
 
 function selectItem() {
     document.querySelector('#arrow').addEventListener('click', () => {
@@ -45,6 +70,8 @@ function sellItem() {
 }
 
 function tradeEvent() {
+    sellOneArrow();
+    sellOneChair();
     sellItem();
     selectItem();
 }
