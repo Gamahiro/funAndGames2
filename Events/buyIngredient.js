@@ -1,5 +1,6 @@
 import { shop } from "../player/shop.js";
 import { player } from "../player/playerObject.js";
+import { cookMeal } from "../Events/cookMeal.js";
 
 function buyIngredientEvent() {
 

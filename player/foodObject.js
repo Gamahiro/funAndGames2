@@ -12,4 +12,4 @@ function mealObject(mealName, price, type, ingredients)  {
     this.ingredients = ingredients;
 }
 
-export {ingredientObject}
+export {ingredientObject, mealObject}
