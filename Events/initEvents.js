@@ -12,13 +12,13 @@ function tabSwitch() {
     document.querySelector('#menuTab').addEventListener('click', initMenuTab);
 }
 
-const interval = setInterval(function() {
+/* const interval = setInterval(function() {
 updateStatusBar();
 }, 500);
 
 const incomeInterval = setInterval(function() {
     workerIncome();
-}, 2000);
+}, 2000); */
 
 function initEvent() {
     recruitEvent();
