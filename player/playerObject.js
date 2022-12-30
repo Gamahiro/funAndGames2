@@ -1,39 +1,39 @@
 const player = {
         saveData: {
             name: undefined,
-            set name(name) {
+            set setName(name) {
                 this.name = name; 
             },
-            get name() {
+            get getName() {
                 return this.name;
             },
             difficulty: undefined,
-            set difficulty(amount) {
+            set setDifficulty(amount) {
                 this.difficulty = amount;
             },
-            get difficulty() {
+            get getDifficulty() {
                 return this.difficulty;
             },
             date: undefined,
-            set date(date) {
+            set setDate(date) {
                 this.date = date;
             },
-            get date() {
+            get getDate() {
                 return this.date;
             },
             playTime: undefined,
-            set playTime(time) {
+            set setPlayTime(time) {
                 playTime = time;
             },
-            get playTime() {
+            get getPlayTime() {
                 return this.playTime;
             }
         },
         truck: undefined,
-        set truck(truckObj) {
+        set setTruck(truckObj) {
             this.truck = truckObj;
         },
-        get truck() {
+        get getTruck() {
             return this.truck;
         },
         inventory: [],

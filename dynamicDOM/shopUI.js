@@ -1,8 +1,14 @@
+import { player } from "../player/playerObject.js";
 
 function generateShopUI(itemList) {
 
     const shopWindow = document.createElement('div');
 
+    const welcomeMsg = document.createElement('div');
+    welcomeMsg.textContent = `Hello, ${player.saveData.name}!`;
+
+    shopWindow.append(welcomeMsg);
+    
     for (let i = 0; i < itemList.length; i++) {
         const element = itemList[i];
 
