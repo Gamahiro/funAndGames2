@@ -1,15 +1,24 @@
 
-function ingredientObject (ingredientName, price, type) {
+function IngredientObject (ingredientName, price, type, playerAmount, shopAmount) {
     this.ingredientName = ingredientName;
     this.price = price;
     this.type = type;
+    this.playerAmount = playerAmount;
+    this.setPlayerAmount = function (num) {
+        this.playerAmount += num;
+    }
+    this.shopAmount = shopAmount;
+    this.setShopAmount = function (num) {
+        this.shopAmount += num;
+    }
 }
 
-function mealObject(mealName, price, type, ingredients)  {
+function MealObject(mealName, price, type, ingredients)  {
     this.mealName = mealName;
     this.price = price;
     this.type = type;
     this.ingredients = ingredients;
 }
 
-export {ingredientObject, mealObject}
+
+export {IngredientObject, MealObject}

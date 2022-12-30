@@ -1,18 +1,21 @@
+import { itemList } from "../player/itemList.js";
 import { player } from "../player/playerObject.js";
-import { ingredientObject } from "../player/foodObject.js";
 
 function cookMeal(meal) {
-    const playerInventory = player.getInventory;
 
     for (let i = 0; i < meal.ingredients.length; i++) {
         const element = meal.ingredients[i];
-        console.log(playerInventory)
-        let index = playerInventory.indexOf(element);
-        if(index < 0) console.log(element)
-            console.log(index)
-             
+        if(element.playerAmount < 1) return console.log(`you don't have enough ${meal.ingredients[i].ingredientName}`);
     }
 
+    for (let i = 0; i < meal.ingredients.length; i++) {
+        const element = meal.ingredients[i];
+        element.setPlayerAmount(-1);
+        document.querySelector(`#${element.ingredientName.replace(/ /g, '')}Amount`).textContent = `${element.playerAmount} x `;
+    }
+
+    player.setMoney = meal.price;
+    console.log(`${meal.mealName} cooked!`)
 }
 
 export {cookMeal}

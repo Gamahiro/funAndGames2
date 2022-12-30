@@ -128,3 +128,19 @@ body {
     }
 }
 
+/* 
+foodtruck
+*/
+
+.inventoryContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: row;
+    
+}
+
+.foodItem {
+    border: 2px solid black;
+    background-color: aliceblue;
+    border-radius: 5px;
+}

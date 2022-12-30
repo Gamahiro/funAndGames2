@@ -1,10 +1,10 @@
 
-function generateShopUI(shopInventory) {
+function generateShopUI(itemList) {
 
     const shopWindow = document.createElement('div');
 
-    for (let i = 0; i < shopInventory.length; i++) {
-        const element = shopInventory[i];
+    for (let i = 0; i < itemList.length; i++) {
+        const element = itemList[i];
 
         const foodItemContainer = document.createElement('div');
         
