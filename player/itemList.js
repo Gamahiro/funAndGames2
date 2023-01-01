@@ -3,4 +3,6 @@ const itemList =  [];
 
 const recipeList = [];
 
-export {itemList, recipeList}
+const selectedList = [];
+
+export {itemList, recipeList, selectedList}
