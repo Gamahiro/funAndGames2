@@ -1,13 +1,41 @@
 import { itemList } from "../player/itemList.js";
 import { createIngredient } from "./createIngredient.js";
 import { createMeal } from "./createMeal.js";
+import itemData from "../player/itemList.json" assert {type: 'json'};
 
+const ingredientList = itemData.ingredients;
+const recipeList = itemData.recipes;
 
 function starterItems() {
-    createIngredient('Tomato', 2, 'Vegetable', 0, 10);
-    createIngredient('Ground Beef', 5, 'Meat', 0, 10);
-    createIngredient('Soft Tortilla', 2, 'Bread', 0, 10);
-    createMeal('Taco', 12, 'Mexican', itemList[0], itemList[1], itemList[2]);
+
+    for (let property in ingredientList) {
+        let ingredient = ingredientList[property];
+        createIngredient(
+            ingredient.ID,
+            ingredient.name,
+            ingredient.price,
+            ingredient.type,
+            0,
+            10
+        )
+    }
+
+    for (let property in recipeList) {
+        let recipe = recipeList[property];
+
+        let recipeIngredients = [];
+
+        recipe.ingredients.forEach(element => {
+            let ingr = itemList.find(({ id }) => id === element);
+            recipeIngredients.push(ingr)
+        });
+        createMeal(
+            recipe.name,
+            recipe.price,
+            recipe.type,
+            recipeIngredients
+        )
+    }
 }
 
 //add more items initialization for progression, levels etc.

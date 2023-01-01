@@ -1,0 +1,50 @@
+{
+    "ingredients": {
+        "tomato": {
+            "ID": 1,
+            "name": "Tomato",
+            "price": 2,
+            "type": "Vegetable"
+        },
+        "beans": {
+            "ID": 2,
+            "name": "Beans",
+            "price": 3,
+            "type": "Vegetable"
+        },
+        "groundBeef": {
+            "ID": 201,
+            "name": "Ground Beef",
+            "price": 5,
+            "type": "Meat"
+        },
+        "softTortilla": {
+            "ID": 401,
+            "name": "Soft Tortilla",
+            "price": 2,
+            "type": "Bread"
+        }
+    },
+    "recipes": {
+        "taco": {
+            "name": "Taco",
+            "price": 12,
+            "type": "Mexican",
+            "ingredients": [
+                1,
+                201,
+                401
+            ]
+        },
+        "vegTaco": {
+            "name": "Vegetarian Taco",
+            "price": 10,
+            "type": "Mexican",
+            "ingredients": [
+                1,
+                2,
+                401
+            ]
+        }
+    }
+}

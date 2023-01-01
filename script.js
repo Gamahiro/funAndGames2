@@ -8,18 +8,22 @@ import { itemList, recipeList } from "./player/itemList.js";
 import { createRecipeList } from "./dynamicDOM/recipesUI.js";
 import { createResourceBar } from "./dynamicDOM/resourceBar.js";
 import {createCustomerOrder} from "./Events/customerOrder.js";
+import itemData from "./player/itemList.json" assert {type: 'json'};
 
 /* initDom();
 initEvent(); */
 
 
+
+
+ 
+starterItems();
 console.log(itemList)
+console.log(recipeList)
 
 createResourceBar();
-starterItems();
 generateShopUI(itemList);
 createInventory(itemList);
-cookMeal(recipeList[0]);
 buyIngredientEvent();
 createRecipeList();
 updateResourceUI();

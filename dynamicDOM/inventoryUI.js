@@ -2,6 +2,7 @@
 function createInventory(itemList) {
 const inventory = document.createElement('div');
 inventory.className = 'inventoryContainer';
+
     for (let i = 0; i < itemList.length; i++) {
         const element = itemList[i];
 
