@@ -11,7 +11,6 @@ function cookMeal(meal) {
 
     for (let i = 0; i < meal.ingredients.length; i++) {
         const element = meal.ingredients[i];
-        console.log(meal.ingredients)
         element.setPlayerAmount(-1);
         document.querySelector(`#${element.ingredientName.replace(/ /g, '')}Amount`).textContent = `${element.playerAmount} x `;
     }

@@ -1,35 +1,26 @@
-import { createPopUI } from "./recruitPopUI.js";
 import {createResourceBar} from "./resourceBar.js";
 import { createMenuTabs } from "./menuTabs.js";
-import { createGFX } from "./createGFX.js";
+import { createInventory } from "./inventoryUI.js";
+import { createRecipeList } from "./recipesUI.js";
+import { generateShopUI } from "./shopUI.js";
+import { createGameWindow } from "./createGameWindow.js";
 
 
 function initDom() {
 
     const content = document.createElement('div');
     content.className = 'content';
+    
 
     document.body.appendChild(content);
     
-    const main = document.createElement('div');
-    main.className = 'main';
-
-    const welcomeMsg = document.createElement('div');
-    welcomeMsg.textContent = 'Welcome to the game!';
-    welcomeMsg.style.fontWeight = 'bold';
-    welcomeMsg.style.backgroundColor = 'aliceblue';
-    welcomeMsg.style.textAlign = 'center';
-    main.append(welcomeMsg);
-
-    
-
-
-
     createResourceBar();
     createMenuTabs();
+
+    const main = document.createElement('main');
     content.append(main);
-    createGFX();
-    createPopUI();
+
+    createGameWindow();   
 
     const footer = document.createElement('div');
     footer.textContent = 'The Gamahiro Project © 2022';

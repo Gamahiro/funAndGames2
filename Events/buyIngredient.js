@@ -15,6 +15,7 @@ function buyIngredientEvent() {
             element.setPlayerAmount(1);
             player.setMoney = - element.price;
             document.querySelector(`#${element.ingredientName.replace(/ /g, '')}Amount`).textContent = `${element.playerAmount} x `;
+            document.querySelector(`#${element.ingredientName.replace(/ /g, '')}Stock`).textContent = `Stock: ${element.shopAmount}`;
             updateResourceUI();
         });
     }

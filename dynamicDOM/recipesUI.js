@@ -17,7 +17,7 @@ function createRecipeList() {
         recipeContainer.append(recipe);
         cookEvent(cookRecipeBtn, element);
     });
-        document.body.append(recipeContainer);
+        document.querySelector('main').append(recipeContainer);
 
 
 }

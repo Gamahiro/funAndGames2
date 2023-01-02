@@ -19,7 +19,7 @@ function createResourceBar() {
 
     resourceStatusBar.append(moneyContainer);
     
-    document.body.append(resourceStatusBar);
+    document.querySelector('.content').append(resourceStatusBar);
 }
 
 export { createResourceBar}

@@ -9,6 +9,11 @@ import { createRecipeList } from "./dynamicDOM/recipesUI.js";
 import { createResourceBar } from "./dynamicDOM/resourceBar.js";
 import {createCustomerOrder} from "./Events/customerOrder.js";
 import itemData from "./player/itemList.json" assert {type: 'json'};
+import { initDom } from "./dynamicDOM/initUI.js";
+import { sellMealsPage } from "./dynamicDOM/sellMealsPage.js";
+import { buyIngredientsPage } from "./dynamicDOM/buyIngredientsPage.js";
+import { createMenuTabs } from "./dynamicDOM/menuTabs.js";
+import { tabEvents } from "./Events/tabEvents.js";
 
 /* initDom();
 initEvent(); */
@@ -16,15 +21,10 @@ initEvent(); */
 
 
 
- 
 starterItems();
-console.log(itemList)
-console.log(recipeList)
-
-createResourceBar();
-generateShopUI(itemList);
-createInventory(itemList);
-buyIngredientEvent();
-createRecipeList();
+initDom();
+tabEvents();
+buyIngredientsPage();
+buyIngredientEvent()
 updateResourceUI();
 createCustomerOrder();

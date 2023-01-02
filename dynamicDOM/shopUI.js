@@ -1,11 +1,15 @@
 import { player } from "../player/playerObject.js";
+import { itemList } from "../player/itemList.js";
+import { createInventory } from "./inventoryUI.js";
 
-function generateShopUI(itemList) {
+function generateShopUI() {
 
+    
     const shopWindow = document.createElement('div');
+    shopWindow.className = 'shopWindow';
 
     const welcomeMsg = document.createElement('div');
-    welcomeMsg.textContent = `Hello, ${player.saveData.name}!`;
+    welcomeMsg.textContent = `Shop`;
 
     shopWindow.append(welcomeMsg);
     
@@ -17,14 +21,20 @@ function generateShopUI(itemList) {
         const foodItemName = document.createElement('div');
         foodItemName.textContent = `${element.ingredientName}`;
 
+        const shopAmount = document.createElement('div');
+        shopAmount.textContent = `Stock: ${element.shopAmount}`;
+        shopAmount.id = `${element.ingredientName.replace(/ /g, '')}Stock`;
+
         const buyButton = document.createElement('button');
         buyButton.id = `buy${element.ingredientName.replace(/ /g, '')}Btn`;
         buyButton.textContent = 'Buy 1';
+
         
-        foodItemContainer.append(foodItemName, buyButton);
+        
+        foodItemContainer.append(foodItemName, shopAmount, buyButton);
         shopWindow.append(foodItemContainer);
     }
-    document.body.append(shopWindow);
+    document.querySelector('main').append(shopWindow);
 }
 
 export {generateShopUI}

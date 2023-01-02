@@ -1,7 +1,14 @@
+import { itemList } from "../player/itemList.js";
 
-function createInventory(itemList) {
+
+function createInventory() {
 const inventory = document.createElement('div');
 inventory.className = 'inventoryContainer';
+
+const inventoryTitle = document.createElement('div');
+inventoryTitle.textContent = 'Inventory';
+
+inventory.append(inventoryTitle);
 
     for (let i = 0; i < itemList.length; i++) {
         const element = itemList[i];
@@ -21,7 +28,7 @@ inventory.className = 'inventoryContainer';
         inventory.append(inventoryItem);
         
     }
-document.body.append(inventory);
+document.querySelector('main').append(inventory);
 
 }
 
