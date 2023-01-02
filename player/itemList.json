@@ -18,6 +18,12 @@
             "price": 5,
             "type": "Meat"
         },
+        "chicken": {
+            "ID": 202,
+            "name": "Chicken",
+            "price": 4,
+            "type": "Meat"
+        },
         "softTortilla": {
             "ID": 401,
             "name": "Soft Tortilla",
@@ -28,7 +34,7 @@
     "recipes": {
         "taco": {
             "name": "Taco",
-            "price": 12,
+            "price": 14,
             "type": "Mexican",
             "ingredients": [
                 1,
@@ -43,6 +49,16 @@
             "ingredients": [
                 1,
                 2,
+                401
+            ]
+        },
+        "chickenTaco": {
+            "name": "Chicken Taco",
+            "price": 12,
+            "type": "Mexican",
+            "ingredients": [
+                1,
+                202,
                 401
             ]
         }

@@ -3,9 +3,15 @@ import { cookEvent } from "../Events/cookEvent.js";
 
 function createRecipeList() {
     const recipeContainer = document.createElement('div');
+    recipeContainer.className = 'recipeContainer';
+
+    const recipeTitle = document.createElement('div');
+    recipeTitle.textContent = 'Cook';
+    recipeContainer.append(recipeTitle);
 
     recipeList.forEach(element => {
         let recipe = document.createElement('div');
+        recipe.className = 'recipeItem';
         let recipeName = document.createElement('div');
         recipeName.textContent = element.mealName;
 

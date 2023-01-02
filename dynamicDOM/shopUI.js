@@ -17,6 +17,10 @@ function generateShopUI() {
         const element = itemList[i];
 
         const foodItemContainer = document.createElement('div');
+        foodItemContainer.className = 'shopItem';
+
+        const foodItemPrice = document.createElement('div');
+        foodItemPrice.textContent = `Price: ${element.price} $`;
         
         const foodItemName = document.createElement('div');
         foodItemName.textContent = `${element.ingredientName}`;
@@ -31,7 +35,7 @@ function generateShopUI() {
 
         
         
-        foodItemContainer.append(foodItemName, shopAmount, buyButton);
+        foodItemContainer.append(foodItemName, foodItemPrice, shopAmount, buyButton);
         shopWindow.append(foodItemContainer);
     }
     document.querySelector('main').append(shopWindow);
