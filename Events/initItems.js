@@ -1,7 +1,9 @@
 import { itemList } from "../player/itemList.js";
 import { createIngredient } from "./createIngredient.js";
 import { createMeal } from "./createMeal.js";
-import itemData from "../player/itemList.json" assert {type: 'json'};
+import { getItemData } from "./utility.js";
+
+const itemData = await getItemData();
 
 const ingredientList = itemData.ingredients;
 const recipeList = itemData.recipes;
