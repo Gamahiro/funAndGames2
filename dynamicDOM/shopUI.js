@@ -1,6 +1,4 @@
-import { player } from "../player/playerObject.js";
 import { itemList } from "../player/itemList.js";
-import { createInventory } from "./inventoryUI.js";
 
 function generateShopUI() {
 

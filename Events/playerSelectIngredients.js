@@ -13,11 +13,4 @@ function createPlayerSelectionList(...ingredients) {
     });
 }
 
-function compareIngredients(recipeIngredients, playerSelection) {
-
-    if(recipeIngredients === playerSelection) return true;
-    
-    return false;
-
-}
 

@@ -40,6 +40,5 @@ function starterItems() {
     }
 }
 
-//add more items initialization for progression, levels etc.
 
 export {starterItems}

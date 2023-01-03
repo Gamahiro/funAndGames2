@@ -1,4 +1,3 @@
-//for overview of resources
 function createResourceBar() {
     const resourceStatusBar = document.createElement('div');
     resourceStatusBar.className = 'resourceStatusBar';
