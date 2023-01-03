@@ -11,15 +11,11 @@ async function getItemData() {
     return itemData;
 }
 
+
 function getRecipeFromIngredients(...ingreds) {
 
-    let ingredientArray = [];
-    ingreds.forEach(element => {
-        ingredientArray.push(element)
-    });
+     let ingredientArray = ingreds[0].sort((a, b) => a.id - b.id);
 
-    /* let recipe = recipeList.find(({ ingredients }) => ingredients === ingredientArray[0]);
-     */
     let recipe = recipeList.find(obj => {
         
         for (let index = 0; index < obj.ingredients.length; index++) {
@@ -37,5 +33,4 @@ function getRecipeFromIngredients(...ingreds) {
     });
     return recipe;
 }
-
 export {randomNumber, getItemData, getRecipeFromIngredients}

@@ -3,6 +3,10 @@ const itemList =  [];
 
 const recipeList = [];
 
-const selectedList = [];
+let selectedList = [];
 
-export {itemList, recipeList, selectedList}
+function updateSelectedList(newList) {
+    selectedList = newList;
+}
+
+export {itemList, recipeList, selectedList, updateSelectedList}
