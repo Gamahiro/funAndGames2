@@ -6,6 +6,7 @@ import { initDom } from "./dynamicDOM/initUI.js";
 import { buyIngredientsPage } from "./dynamicDOM/buyIngredientsPage.js";
 import { tabEvents } from "./Events/tabEvents.js";
 import { initInventoryEvent } from "./Events/inventoryEvent.js";
+import { noSavePage } from "./dynamicDOM/newSaveLandingPage.js";
 
 
 /* initDom();
@@ -20,3 +21,4 @@ buyIngredientEvent()
 updateResourceUI();
 createCustomerOrder();
 initInventoryEvent();
+noSavePage();
