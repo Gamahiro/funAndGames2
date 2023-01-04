@@ -1,4 +1,5 @@
 import { updateResourceUI } from "../controller/updateResource.js";
+import { sellMealsPage } from "../dynamicDOM/sellMealsPage.js";
 import { cookMeal } from "../Events/cookMeal.js";
 import { selectedList } from "../player/itemList.js";
 import { playerError } from "./errorEvent.js";
@@ -11,6 +12,7 @@ function cookEvent() {
             let meal = getRecipeFromIngredients(selectedList);
             cookMeal(meal);
             updateResourceUI();
+            sellMealsPage();
         } catch (error) {
             playerError(document.querySelector('#cookBtn').parentElement, 'That`s not a recipe');
         }

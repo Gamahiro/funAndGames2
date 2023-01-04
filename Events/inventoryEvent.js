@@ -8,9 +8,11 @@ function initInventoryEvent() {
         document.querySelector(`#${element.ingredientName.replace(/ /g, '')}Name`).addEventListener('click', () => {
             activeBorder(document.querySelector(`#${element.ingredientName.replace(/ /g, '')}Name`));
             if(element.playerAmount < 1) {
-            return playerError(document.querySelector(`#${element.ingredientName.replace(/ /g, '')}Name`).parentElement, `You don't have enough ${element.ingredientName}`);
+            return playerError(document.querySelector(`#${element.ingredientName.replace(/ /g, '')}Name`), `You don't have enough ${element.ingredientName}`);
             }
-            
+            else if(selectedList.length > 3) {
+                return playerError(document.querySelector(`#${element.ingredientName.replace(/ /g, '')}Name`), `Max 4 Ingredients`);
+            }
 
             
             else if(!selectedList.includes(element)) {
@@ -29,7 +31,6 @@ function initCookEvent() {
             activeBorder(document.querySelector(`#${element.ingredientName.replace(/ /g, '')}Select`));
             
             updateSelectedList(selectedList.filter(elem => elem !== element));
-            console.log(selectedList)
             sellMealsPage();
         });
     });
