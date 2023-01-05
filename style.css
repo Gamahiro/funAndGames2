@@ -149,7 +149,7 @@ main {
 foodtruck
 */
 
-.inventoryContainer, .recipeContainer, .cookContainer {
+.inventoryContainer, .recipeContainer, .cookContainer, .playerDataContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 35px 75px;
@@ -160,16 +160,28 @@ foodtruck
     background-color: rgb(128, 105, 76);
     text-align: center;
     user-select: none;
+    border: 2px solid black;
 
 }
 
-.inventoryContainer > div:first-child, .recipeContainer > div:first-child, .shopWindow > div:first-child, .cookContainer > div:first-child {
+.playerDataContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.playerDataContainer > div {
+    width: 100%;
+    text-align: start;
+}
+
+.inventoryContainer > div:first-child, .recipeContainer > div:first-child, .shopWindow > div:first-child, .cookContainer > div:first-child, .playerDataContainer > div:first-child {
     font-size: 1.5em;
     font-weight: bold;
     grid-column: 1 / 5;
     border: 2px solid black;
     background-color: rgb(175, 145, 105);
-    
+    text-align: center;
 }
  .shopWindow {
     display: grid;
@@ -181,6 +193,8 @@ foodtruck
     background-color: rgb(128, 105, 76);
     text-align: center;
     user-select: none;
+    border: 2px solid black;
+
 
 }
 
@@ -223,3 +237,4 @@ foodtruck
     flex-direction: column;
     align-items: center;
 }
+
