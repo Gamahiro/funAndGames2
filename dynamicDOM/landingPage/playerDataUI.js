@@ -1,4 +1,4 @@
-import { player } from "../player/playerObject.js";
+import { player } from "../../player/playerObject.js";
 
 function playerDataUI() {
     const main = document.querySelector('main');

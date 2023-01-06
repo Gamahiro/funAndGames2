@@ -1,8 +1,8 @@
 import {createResourceBar} from "./resourceBar.js";
 import { createMenuTabs } from "./menuTabs.js";
 import { createInventory } from "./inventoryUI.js";
-import { createRecipeList } from "./recipesUI.js";
-import { generateShopUI } from "./shopUI.js";
+import { createRecipeList } from "./sellMeals/recipesUI.js";
+import { generateShopUI } from "./ingredientShop/shopUI.js";
 import { createGameWindow } from "./gameWindowUI.js";
 
 

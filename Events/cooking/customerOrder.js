@@ -1,5 +1,5 @@
-import { randomNumber } from "../Events/utility.js";
-import { recipeList } from "../player/itemList.js";
+import { randomNumber } from "../../Events/utility.js";
+import { recipeList } from "../../player/itemList.js";
 
 
 function createCustomerOrder() {

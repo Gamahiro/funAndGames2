@@ -1,9 +1,9 @@
-import { updateResourceUI } from "../controller/updateResource.js";
-import { sellMealsPage } from "../dynamicDOM/sellMealsPage.js";
-import { cookMeal } from "../Events/cookMeal.js";
-import { selectedList } from "../player/itemList.js";
-import { playerError } from "./errorEvent.js";
-import { getRecipeFromIngredients } from "./utility.js";
+import { updateResourceUI } from "../../controller/updateResource.js";
+import { sellMealsPage } from "../../dynamicDOM/sellMeals/sellMealsPage.js";
+import { cookMeal } from "../../Events/cooking/cookMeal.js";
+import { selectedList } from "../../player/itemList.js";
+import { playerError } from "./../errorEvent.js";
+import { getRecipeFromIngredients } from "./../utility.js";
 
 
 function cookEvent() {

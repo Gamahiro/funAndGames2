@@ -13,8 +13,6 @@ inventory.append(inventoryTitle);
     for (let i = 0; i < itemList.length; i++) {
         const element = itemList[i];
 
-        console.log(element)
-
         let inventoryItem = document.createElement('div');
         inventoryItem.className = 'foodItem';
         inventoryItem.id = `${element.ingredientName.replace(/ /g, '')}Name`;

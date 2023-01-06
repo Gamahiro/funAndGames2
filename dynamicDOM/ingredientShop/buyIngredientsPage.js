@@ -1,6 +1,6 @@
-import { createGameWindow } from "./gameWindowUI.js";
-import { createInventory } from "./inventoryUI.js";
-import { generateShopUI } from "./shopUI.js";
+import { createGameWindow } from "../gameWindowUI.js";
+import { createInventory } from "../inventoryUI.js";
+import { generateShopUI } from "../ingredientShop/shopUI.js";
 
 function buyIngredientsPage() {
     let main = document.querySelector('main');

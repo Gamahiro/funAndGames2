@@ -1,5 +1,5 @@
-import { recipeList } from "../player/itemList.js";
-import { cookEvent } from "../Events/cookEvent.js";
+import { recipeList } from "../../player/itemList.js";
+import { cookEvent } from "../../Events/cooking/cookEvent.js";
 
 function createRecipeList() {
     const recipeContainer = document.createElement('div');

@@ -1,7 +1,7 @@
-import { itemList } from "../player/itemList.js";
-import { player } from "../player/playerObject.js";
-import { updateResourceUI } from "../controller/updateResource.js";
-import { playerError } from "../Events/errorEvent.js";
+import { itemList } from "../../player/itemList.js";
+import { player } from "../../player/playerObject.js";
+import { updateResourceUI } from "../../controller/updateResource.js";
+import { playerError } from "../../Events/errorEvent.js";
 
 function buyIngredientEvent() {
 

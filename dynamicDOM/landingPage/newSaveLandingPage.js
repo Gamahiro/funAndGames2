@@ -1,6 +1,6 @@
-import { playerError } from "../Events/errorEvent.js";
-import { player } from "../player/playerObject.js";
-import { createGameWindow } from "./gameWindowUI.js";
+import { playerError } from "../../Events/errorEvent.js";
+import { player } from "../../player/playerObject.js";
+import { createGameWindow } from "../gameWindowUI.js";
 import { landingPage } from "./landingPage.js";
 import { newPlayerUI } from "./newPlayerUI.js";
 

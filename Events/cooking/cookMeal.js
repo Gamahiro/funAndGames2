@@ -1,6 +1,6 @@
-import { player } from "../player/playerObject.js";
-import { playerError } from "../Events/errorEvent.js";
-import { selectedList, updateSelectedList } from "../player/itemList.js";
+import { player } from "../../player/playerObject.js";
+import { playerError } from "../../Events/errorEvent.js";
+import { selectedList, updateSelectedList } from "../../player/itemList.js";
 
 function cookMeal(meal) {
     

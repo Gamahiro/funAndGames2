@@ -1,7 +1,7 @@
-import { buyIngredientsPage } from "../dynamicDOM/buyIngredientsPage.js";
-import { landingPage } from "../dynamicDOM/landingPage.js";
-import { sellMealsPage } from "../dynamicDOM/sellMealsPage.js";
-import { buyIngredientEvent } from "./buyIngredient.js";
+import { buyIngredientsPage } from "../dynamicDOM/ingredientShop/buyIngredientsPage.js";
+import { landingPage } from "../dynamicDOM/landingPage/landingPage.js";
+import { sellMealsPage } from "../dynamicDOM/sellMeals/sellMealsPage.js";
+import { buyIngredientEvent } from "../Events/ingredientShop/buyIngredient.js";
 
 function sellMealsTab() {
     document.querySelector('#sellMealsTab').addEventListener('click', () => {

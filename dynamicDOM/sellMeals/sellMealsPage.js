@@ -1,8 +1,8 @@
-import { cookEvent } from "../Events/cookEvent.js";
-import { initCookEvent, initInventoryEvent } from "../Events/inventoryEvent.js";
+import { cookEvent } from "../../Events/cooking/cookEvent.js";
+import { initCookEvent, initInventoryEvent } from "../../Events/inventoryEvent.js";
 import { createCookUI } from "./createCookUI.js";
-import { createGameWindow } from "./gameWindowUI.js";
-import { createInventory } from "./inventoryUI.js";
+import { createGameWindow } from "../gameWindowUI.js";
+import { createInventory } from "../inventoryUI.js";
 import { createRecipeList } from "./recipesUI.js";
 
 function sellMealsPage() {

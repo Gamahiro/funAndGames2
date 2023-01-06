@@ -1,4 +1,4 @@
-import { sellMealsPage } from "../dynamicDOM/sellMealsPage.js";
+import { sellMealsPage } from "../dynamicDOM/sellMeals/sellMealsPage.js";
 import { activeBorder } from "../dynamicDOM/utilityUI.js";
 import { itemList, selectedList, updateSelectedList } from "../player/itemList.js";
 import { playerError } from "./errorEvent.js";

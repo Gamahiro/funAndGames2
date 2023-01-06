@@ -1,6 +1,6 @@
-import { createGameWindow } from "./gameWindowUI.js";
-import { createInventory } from "./inventoryUI.js";
-import { playerDataUI } from "./playerDataUI.js";
+import { createGameWindow } from "../gameWindowUI.js";
+import { createInventory } from "../inventoryUI.js";
+import { playerDataUI } from "../landingPage/playerDataUI.js";
 
 
 function landingPage() {

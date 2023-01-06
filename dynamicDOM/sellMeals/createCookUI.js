@@ -1,5 +1,5 @@
-import { cookEvent } from "../Events/cookEvent.js";
-import { selectedList } from "../player/itemList.js";
+import { cookEvent } from "../../Events/cooking/cookEvent.js";
+import { selectedList } from "../../player/itemList.js";
 
 
 function createCookUI() {

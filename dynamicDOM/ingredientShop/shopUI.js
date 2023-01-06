@@ -1,4 +1,4 @@
-import { itemList } from "../player/itemList.js";
+import { itemList } from "../../player/itemList.js";
 
 function generateShopUI() {
 
