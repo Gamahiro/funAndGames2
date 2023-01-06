@@ -15,6 +15,7 @@ function cookEvent() {
             sellMealsPage();
         } catch (error) {
             playerError(document.querySelector('#cookBtn').parentElement, 'That`s not a recipe');
+            console.log(error)
         }
     })
 }

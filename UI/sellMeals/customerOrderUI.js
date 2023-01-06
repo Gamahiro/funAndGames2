@@ -1,4 +1,5 @@
 
+
 function createCustomerOrderUI() {
     const gameWindow = document.querySelector('.gameWindow');
     
