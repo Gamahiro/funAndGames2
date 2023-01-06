@@ -1,7 +1,7 @@
 import { cookEvent } from "../Events/cookEvent.js";
 import { initCookEvent, initInventoryEvent } from "../Events/inventoryEvent.js";
 import { createCookUI } from "./createCookUI.js";
-import { createGameWindow } from "./createGameWindow.js";
+import { createGameWindow } from "./gameWindowUI.js";
 import { createInventory } from "./inventoryUI.js";
 import { createRecipeList } from "./recipesUI.js";
 
@@ -10,7 +10,6 @@ function sellMealsPage() {
     while(main.firstChild) {
         main.removeChild(main.firstChild);
     }
-    createGameWindow();
     createInventory();
     initInventoryEvent();
     createCookUI();

@@ -1,6 +1,6 @@
 import { playerError } from "../Events/errorEvent.js";
 import { player } from "../player/playerObject.js";
-import { createGameWindow } from "./createGameWindow.js";
+import { createGameWindow } from "./gameWindowUI.js";
 import { landingPage } from "./landingPage.js";
 import { newPlayerUI } from "./newPlayerUI.js";
 
@@ -11,7 +11,6 @@ function noSavePage() {
         main.removeChild(main.firstChild);
     }
 
-    createGameWindow();
     newPlayerUI();
     document.querySelector('#submitNameBtn').addEventListener('click', (e) => {
         e.preventDefault();

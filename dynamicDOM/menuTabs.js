@@ -24,17 +24,17 @@ function createMenuTabs() {
     recruitTab.id = 'recruitTab';
     recruitTab.textContent = 'Recruit';  */
 
-    const menuTab = document.createElement('div');
-    menuTab.className = 'tab';
-    menuTab.id = 'menuTab';
-    menuTab.textContent = 'Menu';
+    const profileTab = document.createElement('div');
+    profileTab.className = 'tab';
+    profileTab.id = 'profileTab';
+    profileTab.textContent = 'Profile';
 
     const tabBar = document.createElement('nav');
     tabBar.className = 'tabBar';
     tabBar.style.display = 'flex';
 
 
-    tabBar.append(sellMealsTab, ingredientShopTab, truckShopTab, menuTab);
+    tabBar.append(sellMealsTab, ingredientShopTab, truckShopTab, profileTab);
 
     document.querySelector('.content').append(tabBar);
 

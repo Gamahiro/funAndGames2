@@ -1,4 +1,4 @@
-import { createGameWindow } from "./createGameWindow.js";
+import { createGameWindow } from "./gameWindowUI.js";
 import { createInventory } from "./inventoryUI.js";
 import { generateShopUI } from "./shopUI.js";
 
@@ -8,7 +8,6 @@ function buyIngredientsPage() {
         main.removeChild(main.firstChild);
     }
 
-    createGameWindow();
     createInventory();
     generateShopUI();
 }

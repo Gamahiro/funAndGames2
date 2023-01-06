@@ -3,7 +3,7 @@ import { createMenuTabs } from "./menuTabs.js";
 import { createInventory } from "./inventoryUI.js";
 import { createRecipeList } from "./recipesUI.js";
 import { generateShopUI } from "./shopUI.js";
-import { createGameWindow } from "./createGameWindow.js";
+import { createGameWindow } from "./gameWindowUI.js";
 
 
 function initDom() {
@@ -16,11 +16,11 @@ function initDom() {
     
     createResourceBar();
     createMenuTabs();
+    createGameWindow();   
 
     const main = document.createElement('main');
     content.append(main);
 
-    createGameWindow();   
 
     const footer = document.createElement('div');
     footer.textContent = 'The Gamahiro Project © 2022';

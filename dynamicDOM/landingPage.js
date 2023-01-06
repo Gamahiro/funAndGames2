@@ -1,4 +1,4 @@
-import { createGameWindow } from "./createGameWindow.js";
+import { createGameWindow } from "./gameWindowUI.js";
 import { createInventory } from "./inventoryUI.js";
 import { playerDataUI } from "./playerDataUI.js";
 
@@ -9,8 +9,6 @@ function landingPage() {
         main.removeChild(main.firstChild);
     }
 
-    createGameWindow();
-    const gameWindow = document.querySelector('.gameWindow');
 
     playerDataUI();
 }

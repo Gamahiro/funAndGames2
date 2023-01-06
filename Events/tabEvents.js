@@ -1,4 +1,5 @@
 import { buyIngredientsPage } from "../dynamicDOM/buyIngredientsPage.js";
+import { landingPage } from "../dynamicDOM/landingPage.js";
 import { sellMealsPage } from "../dynamicDOM/sellMealsPage.js";
 import { buyIngredientEvent } from "./buyIngredient.js";
 
@@ -17,12 +18,19 @@ function ingredientShopTab() {
 
 }
 
+function profileTab() {
+    document.querySelector('#profileTab').addEventListener('click', () => {
+        landingPage();
+    })
+} 
+
 
 
 // initializes all the tab events
 function tabEvents() {
     sellMealsTab();
     ingredientShopTab();
+    profileTab();
 }
 
 export {tabEvents}

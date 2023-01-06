@@ -24,7 +24,6 @@ const main = document.querySelector('main');
     nameContainer.append(nameLabel, nameInput, submitBtn);
     nameForm.append(nameContainer);
     gameWindow.append(nameForm);
-    main.append(gameWindow);
     }
 
     export {newPlayerUI}
