@@ -1,6 +1,6 @@
-import { buyIngredientsPage } from "../../dynamicDOM/ingredientShop/buyIngredientsPage.js";
-import { landingPage } from "../../dynamicDOM/landingPage/landingPage.js";
-import { sellMealsPage } from "../../dynamicDOM/sellMeals/sellMealsPage.js";
+import { buyIngredientsPage } from "../../UI/ingredientShop/buyIngredientsPage.js";
+import { landingPage } from "../../UI/landingPage/landingPage.js";
+import { sellMealsPage } from "../../UI/sellMeals/sellMealsPage.js";
 import { buyIngredientEvent } from "../ingredientShop/buyIngredient.js";
 
 function sellMealsTab() {

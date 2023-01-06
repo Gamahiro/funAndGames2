@@ -1,4 +1,4 @@
-import { createErrorMessage } from "../dynamicDOM/errorMessage.js";
+import { createErrorMessage } from "../UI/errorMessage.js";
 
 function playerError(appendTo, message) {
 createErrorMessage(appendTo, message);

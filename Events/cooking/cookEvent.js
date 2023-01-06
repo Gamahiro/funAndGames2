@@ -1,5 +1,5 @@
 import { updateResourceUI } from "../../controller/updateResource.js";
-import { sellMealsPage } from "../../dynamicDOM/sellMeals/sellMealsPage.js";
+import { sellMealsPage } from "../../UI/sellMeals/sellMealsPage.js";
 import { cookMeal } from "../../Events/cooking/cookMeal.js";
 import { selectedList } from "../../player/itemList.js";
 import { playerError } from "./../errorEvent.js";

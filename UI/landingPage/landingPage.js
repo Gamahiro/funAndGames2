@@ -1,15 +1,16 @@
 import { createGameWindow } from "../gameWindowUI.js";
 import { createInventory } from "../inventoryUI.js";
-import { generateShopUI } from "../ingredientShop/shopUI.js";
+import { playerDataUI } from "./playerDataUI.js";
 
-function buyIngredientsPage() {
+
+function landingPage() {
     let main = document.querySelector('main');
     while(main.firstChild) {
         main.removeChild(main.firstChild);
     }
 
-    createInventory();
-    generateShopUI();
+
+    playerDataUI();
 }
 
-export {buyIngredientsPage}
+export {landingPage}
