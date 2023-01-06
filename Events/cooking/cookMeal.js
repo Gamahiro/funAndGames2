@@ -18,6 +18,7 @@ function cookMeal(meal) {
     player.setMoney = meal.price;
     updateSelectedList([]);
     console.log(`${meal.mealName} cooked!`)
+    console.log(meal)
 }
 
 export {cookMeal}
