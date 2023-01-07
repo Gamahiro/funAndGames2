@@ -19,10 +19,10 @@ function cookMeal(meal) {
         document.querySelector(`#${element.ingredientName.replace(/ /g, '')}Amount`).textContent = `${element.playerAmount} x `;
     }
     if(meal === currentOrder) {
-        player.setMoney = meal.price;
+        player.saveData.setMoney = meal.price;
         console.log(`${meal.mealName} cooked!`)
     }else {
-        player.setMoney = meal.price  - 5;
+        player.saveData.setMoney = meal.price  - 5;
         console.log(`Order was ${currentOrder.mealName} and not ${meal.mealName}`)
     }
     updateSelectedList([]);

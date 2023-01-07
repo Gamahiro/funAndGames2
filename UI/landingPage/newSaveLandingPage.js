@@ -20,6 +20,7 @@ function noSavePage() {
             return playerError(document.querySelector('#nameInput').parentElement, 'Too long or too short name');
         }
         player.saveData.setName = document.querySelector('#nameInput').value;
+        console.log(player.saveData.getName)
         landingPage();
     })
 }

@@ -1,41 +1,50 @@
-import { itemList, recipeList, setItemList, setRecipeList } from "../../player/itemList.js";
+import { currentOrder, itemList, recipeList, setItemList, setRecipeList, updateCurrentOrder } from "../../player/itemList.js";
 import { player, setPlayer } from "../../player/playerObject.js";
 
-let newPlayerObject = {
-    newPlayer: player,
-        get getNewPlayer() {
-            return this.newPlayer;
-        },
-    newItemList: itemList,
-        get getNewItemList() {
-            return this.newItemList;
-        },
-    newRecipeList: recipeList,
-        get getNewRecipeList() {
-            return this.newRecipeList;
-        }
-}
 
 
 function savePlayer(saveName) {
+console.log(itemList);
+    let saveObject = {
+        player: {
+        money: player.saveData.getMoney,
+        name: player.saveData.getName
+    },
+    itemList: itemList,
+    recipeList: recipeList,
+    currentOrder: currentOrder
+}
+
     if(localStorage.getItem(saveName)) localStorage.removeItem(saveName);
-    localStorage.setItem(saveName, JSON.stringify(newPlayerObject));
+    localStorage.setItem(saveName, JSON.stringify(saveObject));
 }
 
 
 function loadPlayer(saveName) {
+
+    try {
+    if(localStorage.getItem(saveName)) {    
     const loadStringData = localStorage.getItem(saveName);
     const loadData = JSON.parse(loadStringData);
+    console.log(loadData)
 
-    console.log('load data:')
-    console.log(loadData);
+    player.saveData.setName = loadData.player.name;
+    player.saveData.money = loadData.player.money;
 
-    player.saveData.setName = loadData.newPlayer.saveData.name;
-    player.saveData.setMoney = loadData.newPlayer.saveData.getMoney;
 
-    setItemList(loadData.getNewItemList);
-    setRecipeList(loadData.getNewRecipeList);
+    setItemList(loadData.itemList);
+    setRecipeList(loadData.recipeList);
+    updateCurrentOrder(loadData.currentOrder);
+}
+    } catch (error) {
+        console.log(error);
+    }
+    
+}
+
+function deleteSaveData(saveName) {
+    localStorage.removeItem(saveName)
 }
 
 
-export {savePlayer, loadPlayer}
+export {savePlayer, loadPlayer, deleteSaveData}

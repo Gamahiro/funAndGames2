@@ -13,7 +13,7 @@ async function getItemData() {
 
 
 function getRecipeFromIngredients(...ingreds) {
-
+        // issue here with comparing after game loading a save
      let ingredientArray = ingreds[0].sort((a, b) => a.id - b.id);
 
     let recipe = recipeList.find(obj => {
