@@ -20,6 +20,7 @@ Will have to create functions to set the data into a new object using a 'saveDat
 ## Customer Orders:
 Customers will appear in the gameWindow element placing an order which the player has to cook.
 The challenge for the player will be that they won't be able to see the recipe on the cooking screen.
+Might create an interval event so that there won't be an order available all the time.
 
 ## Landing page/main page
 If no saveData is found, create landing page

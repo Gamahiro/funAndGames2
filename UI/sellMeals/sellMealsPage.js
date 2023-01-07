@@ -4,6 +4,8 @@ import { createCookUI } from "./createCookUI.js";
 import { createGameWindow } from "../gameWindowUI.js";
 import { createInventory } from "../inventoryUI.js";
 import { createRecipeList } from "./recipesUI.js";
+import { createCustomerOrderUI } from "./customerOrderUI.js";
+import { createCustomerOrder } from "../../Events/cooking/customerOrder.js";
 
 function sellMealsPage() {
     let main = document.querySelector('main');
@@ -15,6 +17,7 @@ function sellMealsPage() {
     createCookUI();
     cookEvent();
     initCookEvent();
+    createCustomerOrderUI();
 }
 
 export {sellMealsPage}

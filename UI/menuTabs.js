@@ -14,15 +14,15 @@ function createMenuTabs() {
     truckShopTab.id = 'truckShopTab';
     truckShopTab.textContent = 'Truck Shop';
 
-    /* const craftTab = document.createElement('div');
-    craftTab.className = 'tab';
-    craftTab.id = 'craftTab';
-    craftTab.textContent = 'Craft';
+    const saveGame = document.createElement('div');
+    saveGame.className = 'tab';
+    saveGame.id = 'saveGame';
+    saveGame.textContent = 'Save';
 
-    const recruitTab = document.createElement('div');
-    recruitTab.className = 'tab';
-    recruitTab.id = 'recruitTab';
-    recruitTab.textContent = 'Recruit';  */
+    const loadGame = document.createElement('div');
+    loadGame.className = 'tab';
+    loadGame.id = 'loadGame';
+    loadGame.textContent = 'Load'; 
 
     const profileTab = document.createElement('div');
     profileTab.className = 'tab';
@@ -34,7 +34,7 @@ function createMenuTabs() {
     tabBar.style.display = 'flex';
 
 
-    tabBar.append(sellMealsTab, ingredientShopTab, truckShopTab, profileTab);
+    tabBar.append(sellMealsTab, ingredientShopTab, truckShopTab, profileTab, saveGame, loadGame);
 
     document.querySelector('.content').append(tabBar);
 
