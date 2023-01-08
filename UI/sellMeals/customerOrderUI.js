@@ -10,7 +10,8 @@ function createCustomerOrderUI() {
     const gameWindow = document.querySelector('.gameWindow');
     
     let orderContainer = document.createElement('div');
-    orderContainer.className = 'orderContainer';
+    orderContainer.className = 'dialogueBox';
+    orderContainer.id = 'orderContainer';
 
     let orderImage = document.createElement('img');
     orderImage.id = 'orderImage';
