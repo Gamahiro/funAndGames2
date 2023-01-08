@@ -11,6 +11,7 @@ import { createCustomerOrderUI } from "./UI/sellMeals/customerOrderUI.js";
 import { deleteSaveData, loadPlayer } from "./Events/playerData/localStorage.js";
 import { itemList, recipeList } from "./player/itemList.js";
 import { landingPage } from "./UI/landingPage/landingPage.js";
+import { restockIngredients } from "./Events/ingredientShop/ingredientRestock.js";
 
 
 /* initDom();
@@ -26,3 +27,6 @@ if(!localStorage.getItem('defaultSave')) {
 }
 tabEvents();
 updateResourceUI();
+const ingredientsRestock = setInterval(() => {
+    restockIngredients(5);
+}, 60000);
