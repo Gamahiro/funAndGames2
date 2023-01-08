@@ -29,12 +29,21 @@ function createMenuTabs() {
     profileTab.id = 'profileTab';
     profileTab.textContent = 'Profile';
 
+    const delSaveTab = document.createElement('div');
+    delSaveTab.className = 'tab';
+    delSaveTab.id = 'delSaveTab';
+    delSaveTab.textContent = 'Delete Savedata';
+    delSaveTab.style.backgroundColor = 'red';
+    delSaveTab.style.color = 'white';
+
     const tabBar = document.createElement('nav');
     tabBar.className = 'tabBar';
     tabBar.style.display = 'flex';
 
+    
 
-    tabBar.append(sellMealsTab, ingredientShopTab, truckShopTab, profileTab, saveGame, loadGame);
+
+    tabBar.append(sellMealsTab, ingredientShopTab, truckShopTab, profileTab, saveGame, loadGame, delSaveTab);
 
     document.querySelector('.content').append(tabBar);
 

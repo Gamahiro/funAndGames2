@@ -1,4 +1,4 @@
-import { savePlayer, loadPlayer } from "../../Events/playerData/localStorage.js";
+import { savePlayer, loadPlayer, deleteSaveData } from "../../Events/playerData/localStorage.js";
 
 function saveLoadGame(saveName) {
 
@@ -13,6 +13,11 @@ function saveLoadGame(saveName) {
         loadPlayer(saveName);
         alert(`${saveName} loaded`);
     });
+
+    document.querySelector('#delSaveTab').addEventListener('click', () => {
+        deleteSaveData('defaultSave');
+        alert(`savedata deleted`);
+    })
 
 }
 

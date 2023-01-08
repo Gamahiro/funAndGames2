@@ -32,24 +32,21 @@ function setRecipeList(...newRecipes) {
     for (let property in newRecipes[0]) {
 
         let recipe = newRecipes[0][property];
-
-
-
-
         let recipeIngredients = [];
 
         recipe.ingredients.forEach(element => {
-            let ingr = itemList.find(({ id }) => id === element);
+
+            /* let ingr = itemList.find(({ id }) => id === element); */
+            let ingr = itemList.find(elem => elem.id === element.id)
             recipeIngredients.push(ingr)
         });
         createMeal(
-            recipe.name,
+            recipe.mealName,
             recipe.price,
             recipe.type,
             recipeIngredients
         )
     }
-
 }
 
 function updateCurrentOrder(newOrder) {

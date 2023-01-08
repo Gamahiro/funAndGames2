@@ -9,7 +9,7 @@ import { initInventoryEvent } from "./Events/inventoryEvent.js";
 import { noSavePage } from "./UI/landingPage/newSaveLandingPage.js";
 import { createCustomerOrderUI } from "./UI/sellMeals/customerOrderUI.js";
 import { deleteSaveData, loadPlayer } from "./Events/playerData/localStorage.js";
-import { itemList } from "./player/itemList.js";
+import { itemList, recipeList } from "./player/itemList.js";
 import { landingPage } from "./UI/landingPage/landingPage.js";
 
 
@@ -25,8 +25,4 @@ if(!localStorage.getItem('defaultSave')) {
     landingPage();
 }
 tabEvents();
-buyIngredientsPage();
-buyIngredientEvent()
 updateResourceUI();
-initInventoryEvent();
-createCustomerOrder();
