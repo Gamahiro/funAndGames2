@@ -1,5 +1,5 @@
 
-function IngredientObject (id, ingredientName, price, type, playerAmount, shopAmount) {
+function IngredientObject (id, ingredientName, price, type, playerAmount, shopAmount, imageSrc) {
     this.id = id;
     this.ingredientName = ingredientName;
     this.price = price;
@@ -12,6 +12,8 @@ function IngredientObject (id, ingredientName, price, type, playerAmount, shopAm
     this.setShopAmount = function (num) {
         this.shopAmount += num;
     }
+    this.imageSrc = imageSrc;
+
 }
 
 function MealObject(mealName, price, type, ingredients)  {

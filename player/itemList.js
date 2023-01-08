@@ -21,7 +21,8 @@ function setItemList(...newItems) {
             ingredient.price,
             ingredient.type,
             ingredient.playerAmount,
-            ingredient.shopAmount
+            ingredient.shopAmount,
+            ingredient.imageSrc
         )
     }
 }

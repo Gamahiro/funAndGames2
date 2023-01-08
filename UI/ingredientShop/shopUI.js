@@ -14,8 +14,12 @@ function generateShopUI() {
     for (let i = 0; i < itemList.length; i++) {
         const element = itemList[i];
 
+        let imgUrl = `../assets/images/${element.imageSrc}`;
+
         const foodItemContainer = document.createElement('div');
         foodItemContainer.className = 'shopItem';
+        foodItemContainer.style.backgroundImage = `url(${imgUrl})`;
+        foodItemContainer.style.backgroundSize = 'cover';
 
         const foodItemPrice = document.createElement('div');
         foodItemPrice.textContent = `Price: ${element.price} $`;

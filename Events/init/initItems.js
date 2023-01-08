@@ -18,7 +18,8 @@ function starterItems() {
             ingredient.price,
             ingredient.type,
             0,
-            10
+            10,
+            ingredient.imageSrc
         )
     }
 

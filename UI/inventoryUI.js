@@ -13,9 +13,15 @@ inventory.append(inventoryTitle);
     for (let i = 0; i < itemList.length; i++) {
         const element = itemList[i];
 
+        let imgUrl = `../assets/images/${element.imageSrc}`;
+        console.log(element)
+
         let inventoryItem = document.createElement('div');
         inventoryItem.className = 'foodItem';
         inventoryItem.id = `${element.ingredientName.replace(/ /g, '')}Name`;
+        inventoryItem.style.backgroundImage = `url(${imgUrl})`;
+        inventoryItem.style.backgroundSize = 'cover';
+
 
         let itemPlayerAmount = document.createElement('span');
         itemPlayerAmount.id = `${element.ingredientName.replace(/ /g, '')}Amount`;

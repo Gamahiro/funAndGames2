@@ -21,6 +21,7 @@ starterItems();
 initDom();
 if(!localStorage.getItem('defaultSave')) {
     noSavePage();
+    createCustomerOrder();
 } else {
     loadPlayer('defaultSave');
     landingPage();

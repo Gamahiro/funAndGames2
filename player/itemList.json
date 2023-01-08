@@ -4,31 +4,37 @@
             "ID": 1,
             "name": "Tomato",
             "price": 2,
-            "type": "Vegetable"
+            "type": "Vegetable",
+            "imageSrc": "tomato.jpg"
         },
         "beans": {
             "ID": 2,
             "name": "Beans",
             "price": 3,
-            "type": "Vegetable"
+            "type": "Vegetable",
+            "imageSrc": "beans.webp"
+            
         },
         "groundBeef": {
             "ID": 201,
             "name": "Ground Beef",
             "price": 5,
-            "type": "Meat"
+            "type": "Meat",
+            "imageSrc": "placeholder.svg"
         },
         "chicken": {
             "ID": 202,
             "name": "Chicken",
             "price": 4,
-            "type": "Meat"
+            "type": "Meat",
+            "imageSrc": "placeholder.svg"
         },
         "softTortilla": {
             "ID": 401,
             "name": "Soft Tortilla",
             "price": 2,
-            "type": "Bread"
+            "type": "Bread",
+            "imageSrc": "placeholder.svg"
         }
     },
     "recipes": {
