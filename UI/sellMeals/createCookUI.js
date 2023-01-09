@@ -13,9 +13,13 @@ function createCookUI() {
     cookContainer.append(cookTitle);
 
     selectedList.forEach(element => {
+        let imgUrl = `../assets/images/${element.imageSrc}`;
+
         let cookItem = document.createElement('div');
         cookItem.className = 'cookItem';
         cookItem.id = `${element.ingredientName.replace(/ /g, '')}Select`;
+        cookItem.style.backgroundImage = `url(${imgUrl})`;
+        cookItem.style.backgroundSize = 'cover';
         let cookItemName = document.createElement('div');
         cookItemName.textContent = element.ingredientName;
 

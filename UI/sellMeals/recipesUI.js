@@ -10,8 +10,11 @@ function createRecipeList() {
     recipeContainer.append(recipeTitle);
 
     recipeList.forEach(element => {
+        let imgUrl = `../assets/images/${element.imageSrc}`;
         let recipe = document.createElement('div');
         recipe.className = 'recipeItem';
+        recipe.style.backgroundImage = `url(${imgUrl})`;
+        recipe.style.backgroundSize = 'cover';
         let recipeName = document.createElement('div');
         recipeName.textContent = element.mealName;
 

@@ -30,6 +30,7 @@ inventory.append(inventoryTitle);
         let itemName = document.createElement('span');
         itemName.textContent = `${element.ingredientName}`;
 
+
         inventoryItem.append(itemPlayerAmount, itemName);
         inventory.append(inventoryItem);
         
