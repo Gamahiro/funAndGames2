@@ -22,12 +22,8 @@ function initDom() {
     content.append(main);
 
 
-    const footer = document.createElement('div');
+    const footer = document.createElement('footer');
     footer.textContent = 'The Gamahiro Project © 2022';
-    footer.style.textAlign = 'center';
-    footer.style.backgroundColor = 'aliceblue';
-    footer.style.fontWeight = 'bold';
-    footer.style.padding = '3px';
 
     document.body.append(footer);
 }

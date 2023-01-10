@@ -10,16 +10,29 @@ body {
 }
 
 .content {
-    background-color: burlywood;
+    background-color: #22afc9;
     padding: 0px;
     margin: 0px;
     height: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    border: 2px solid black;
+    border-bottom: none;
 }
 
+footer {
+    text-align: center;
+    background-color: white;
+    font-weight: bold;
+    padding: 3px;
+    border: 2px solid black;
+    border-top: none;
+    /* footer.style.textAlign = 'center';
+    footer.style.backgroundColor = 'aliceblue';
+    footer.style.fontWeight = 'bold';
+    footer.style.padding = '3px'; */
+}
 
 .resourceStatusBar {
     margin-top: 5px;
@@ -45,7 +58,11 @@ body {
 .tabBar {
     justify-content: center;
     margin-bottom: 5px;
+    padding: 5px 0px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
     user-select: none;
+    background-color: white;
 
 }
 .tab {
@@ -53,13 +70,14 @@ body {
     border: 2px solid black;
     border-radius: 5px;
     padding: 2px;
-    background-color: aliceblue;
+    background-color: slateblue;
+    color: white;
     margin-left: 5px;
     margin-right: 5px;
 }
 .tab:hover {
     cursor: pointer;
-    background-color: rgba(240, 248, 255, 0.608);
+    background-color: #176f7eab;
 }
 
 main {
@@ -68,9 +86,10 @@ main {
     width: 750px;
     height: 700px;
     display: grid;
-    grid-template-columns: 375px 375px;
+    grid-template-columns: 370px 370px;
     grid-auto-rows: auto;
     align-content: space-around;
+    column-gap: 10px;
 }
 
 
@@ -101,7 +120,7 @@ main {
     grid-auto-flow: row;
     padding: 2px;
     gap: 2px;
-    background-color: rgb(128, 105, 76);
+    background-color: white;
     text-align: center;
     user-select: none;
     border: 2px solid black;
@@ -124,7 +143,8 @@ main {
     font-weight: bold;
     grid-column: 1 / 5;
     border: 2px solid black;
-    background-color: rgb(175, 145, 105);
+    background-color: slateblue;
+    color: white;
     text-align: center;
 }
  .shopWindow {
@@ -134,7 +154,7 @@ main {
     grid-auto-flow: row;
     padding: 2px;
     gap: 2px;
-    background-color: rgb(128, 105, 76);
+    background-color: white;
     text-align: center;
     user-select: none;
     border: 2px solid black;
